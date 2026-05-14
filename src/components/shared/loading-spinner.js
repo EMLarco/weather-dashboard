@@ -1,0 +1,24 @@
+import { LitElement, html, css } from 'lit';
+
+class LoadingSpinner extends LitElement {
+  static styles = css`
+    .spinner {
+      border: 4px solid rgba(0,0,0,0.1);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border-left-color: var(--primary-color, #3498db);
+      animation: spin 1s linear infinite;
+      margin: 1rem auto;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  `;
+
+  render() {
+    return html`<div class="spinner"></div>`;
+  }
+}
+
+customElements.define('loading-spinner', LoadingSpinner);

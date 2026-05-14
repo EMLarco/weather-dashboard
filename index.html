@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  app-header { flex-shrink: 0; z-index: 2000; }
+  main#outlet {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    min-height: 0;
+  }
+  app-footer { flex-shrink: 0; z-index: 2000; }
+</style>
+</head>
+<body>
+  <app-header></app-header>
+  <main id="outlet"></main>
+  <app-footer></app-footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
